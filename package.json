@@ -1,0 +1,11 @@
+{
+  "name": "eth-chart",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./server"
+  },
+  "dependencies": {
+    "express": "~4.15.2"
+  }
+}
