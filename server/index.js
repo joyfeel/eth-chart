@@ -1,12 +1,12 @@
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 const express = require('express');
 const config = require('./config');
-const price = require('./router/coin/price');
+const router = require('./router');
+
+
 
 let app = express();
-app.use('/price',price);
-
-app.get('/', function (req, res) {
-  res.send('Hello World!');
-});
+router(app);
 
 app.listen(config.port,()=>console.log("connect"));
